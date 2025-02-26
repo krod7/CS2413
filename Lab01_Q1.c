@@ -14,8 +14,8 @@
 #include <stdlib.h>
 struct ListNode* removeElements(struct ListNode* head, int val) {
     // Create a dummy node to handle edge cases
-    struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
     // The dummy updates the head
+    struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
     dummy->next = head;
     
     // Pointer to traverse the list

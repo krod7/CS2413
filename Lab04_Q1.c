@@ -22,8 +22,9 @@ bool isMirror(struct TreeNode *t1, struct TreeNode *t2)
     // Check if values in subtrees are the same and mirrored too
     return (t1->val == t2->val)
            // LST of t1 with RST of t2
+           && isMirror(t1->left, t2->right)
            // RST of t1 with LST of t2
-           && isMirror(t1->left, t2->right) && isMirror(t1->right, t2->left);
+           && isMirror(t1->right, t2->left);
 }
 
 // Main Function
